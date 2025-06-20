@@ -9,9 +9,9 @@ export interface PointOfInterest {
 
 export const pois: PointOfInterest[] = [
   {
-    name: "Landline",
+    name: "Air Cage 1",
     coordinates: [51.51389, -0.14417],
-    description: "A major new work by Sean Scully comprised of layered colored marble slabs in a vertical tower.",
+    description: "Hanover Saqure, London, UK<br>2023",
     category: "Sculpture",
     imageUrl: "https://upload.wikimedia.org/wikipedia/commons/6/69/Landline_by_Sean_Scully%2C_Hanover_Square%2C_London.jpg",
   },
