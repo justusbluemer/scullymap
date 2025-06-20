@@ -35,14 +35,20 @@ class ScullyMap {
       scrollWheelZoom: true,
       doubleClickZoom: true,
       dragging: true,
-      touchZoom: true
+      touchZoom: true,
+	  attributionControl: false,
+	  attribution: 'Data by &copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>, under <a href="https://opendatacommons.org/licenses/odbl/">ODbL.</a>'
     });
 
     // Add OpenStreetMap tiles
     L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-      attribution: '© <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
       maxZoom: 19
     }).addTo(this.map);
+
+	L.control.attribution({
+		position: 'bottomright',
+		prefix: 'Daten von &copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a> unter <a href="https://opendatacommons.org/licenses/odbl/">ODbL.</a>'
+	}).addTo(this.map);
   }
 
   private addPOIMarkers(): void {
