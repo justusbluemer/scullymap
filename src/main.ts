@@ -13,7 +13,7 @@ const categoryColors: Record<string, string> = {
   'Nature': '#10B981',          // Green
   'Entertainment': '#EC4899',   // Pink
   'Museum': '#6366F1',          // Indigo
-  'Sculpture': '#DC2626'        // Dark Red
+  'Sculpture': '#763c28'        // Dark Red
 };
 
 class ScullyMap {
@@ -90,15 +90,9 @@ class ScullyMap {
     const color = categoryColors[poi.category] || '#6B7280';
     
     infoContent.innerHTML = `
-      <div class="flex items-center gap-2 mb-3">
-        <div class="w-4 h-4 rounded-full" style="background-color: ${color};"></div>
-        <span class="text-sm font-medium text-gray-600 uppercase tracking-wide">${poi.category}</span>
-      </div>
       <h2 class="font-bold text-xl text-gray-800 mb-3">${poi.name}</h2>
       <p class="text-gray-600 mb-4 leading-relaxed">${poi.description}</p>
       ${poi.imageUrl ? `<img src="${poi.imageUrl}" alt="${poi.name}" class="w-full h-auto rounded-lg mb-4">` : ''}
-      ${poi.address ? `<div class="mb-3"><strong class="text-gray-700">Address:</strong><br><span class="text-gray-600">${poi.address}</span></div>` : ''}
-      ${poi.website ? `<a href="${poi.website}" target="_blank" class="inline-flex items-center gap-1 text-blue-600 hover:text-blue-800 font-medium text-sm">Visit website <span>→</span></a>` : ''}
     `;
 
     infoPanel.classList.remove('hidden');
