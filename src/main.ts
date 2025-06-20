@@ -47,8 +47,8 @@ class ScullyMap {
 
   private addPOIMarkers(): void {
     pois.forEach((poi) => {
-      const color = categoryColors[poi.category] || '#6B7280';
-      
+	  const color = categoryColors[poi.category] || '#6B7280';
+
       // Create custom icon
       const customIcon = L.divIcon({
         className: 'custom-marker',
@@ -86,8 +86,6 @@ class ScullyMap {
     const infoContent = document.getElementById('info-content');
     
     if (!infoPanel || !infoContent) return;
-
-    const color = categoryColors[poi.category] || '#6B7280';
     
     infoContent.innerHTML = `
       <h2 class="font-bold text-xl text-gray-800 mb-3">${poi.name}</h2>
