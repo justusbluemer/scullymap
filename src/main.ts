@@ -37,7 +37,6 @@ class ScullyMap {
       dragging: true,
       touchZoom: true,
 	  attributionControl: false,
-	  attribution: 'Data by &copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>, under <a href="https://opendatacommons.org/licenses/odbl/">ODbL.</a>'
     });
 
     // Add OpenStreetMap tiles
