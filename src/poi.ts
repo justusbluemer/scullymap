@@ -9,24 +9,25 @@ export interface PointOfInterest {
 
 export const pois: PointOfInterest[] = [
   {
-    name: "Air Cage 1",
-    coordinates: [51.51389, -0.14417],
-    description: "Hanover Saqure, London, UK<br>2023",
+    name: "Shadowing Stack",
+    coordinates: [50.36278317528439, 7.605046925030399],
+    description: "2018<br>Corten steel",
     category: "Sculpture",
-    imageUrl: "https://upload.wikimedia.org/wikipedia/commons/6/69/Landline_by_Sean_Scully%2C_Hanover_Square%2C_London.jpg",
+    imageUrl: "",
   },
   {
-    name: "Stone Tower",
-    coordinates: [46.9519, -0.0773],
-    description: "A monumental stone tower created by Scully for the Château d'Oiron in western France. Built from local stone, this formidable 'fortress' echoes the scale and architecture of the Renaissance castle. Unveiled in late 2024, it is Scully's first permanent sculpture in a French public institution, inviting visitors to discover new viewpoints across the historic parkland.",
+    name: "Coin Stack 2",
+    coordinates: [50.593453608848044, 12.643785381402827],
+    description: "2020<br>Bronze",
     category: "Sculpture",
+    imageUrl: "",
   },
   {
-    name: "Wall Dale Cubed",
-    coordinates: [53.609386, -1.576314],
-    description: "A colossal dry-stone wall sculpture at Yorkshire Sculpture Park (UK), constructed from over 1,000 tonnes of locally quarried Yorkshire stone. Completed in 2018, this monumental cuboid wall was built in the manner of ancient Irish stone walls – uniformly throughout – so that 'when looking at the outside of the block, one can feel the inside without being able to see it'. The piece stretches ~30m in length and stands in the open landscape of YSP's Lower Park, where its weathered stone grid integrates with the pastoral surroundings.",
+    name: "Coin Stack",
+    coordinates: [51.96235726361686, 7.623959509418155],
+    description: "2018<br>Bronze",
     category: "Sculpture",
-    imageUrl: "https://ysp.org.uk/media/whqn0hfk/sean-scully-wall-dale-cubed-2018-photo-jonty-wilde-courtesy-ysp-1.jpg?anchor=center&mode=crop&width=1600&height=1000&rnd=132646395346170000",
+    imageUrl: "",
   },
   {
     name: "Crann Saoilse (Wall of Light)",
