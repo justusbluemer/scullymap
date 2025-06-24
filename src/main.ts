@@ -95,7 +95,7 @@ class ScullyMap {
     infoContent.innerHTML = `
       <h2 class="font-bold text-xl text-gray-800 mb-3">${poi.name}</h2>
       <p class="text-gray-600 mb-4 leading-relaxed">${poi.description}</p>
-      ${poi.imageUrl ? `<img src="${poi.imageUrl}" alt="${poi.name}" class="w-full h-auto rounded-lg mb-4 max-h-[50vh]">` : ''}
+      ${poi.imageUrl ? `<img src="${poi.imageUrl}" alt="${poi.name}" class="w-full h-auto object-contain rounded-lg mb-4 max-h-[50vh]">` : ''}
     `;
 
     infoPanel.classList.remove('opacity-0', 'pointer-events-none');
