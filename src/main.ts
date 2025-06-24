@@ -95,34 +95,34 @@ class ScullyMap {
     infoContent.innerHTML = `
       <h2 class="font-bold text-xl text-gray-800 mb-3">${poi.name}</h2>
       <p class="text-gray-600 mb-4 leading-relaxed">${poi.description}</p>
-      ${poi.imageUrl ? `<img src="${poi.imageUrl}" alt="${poi.name}" class="w-full h-auto rounded-lg mb-4">` : ''}
+      ${poi.imageUrl ? `<img src="${poi.imageUrl}" alt="${poi.name}" class="w-full h-auto rounded-lg mb-4 max-h-[50vh]">` : ''}
     `;
 
-    infoPanel.classList.remove('hidden');
-    infoPanel.classList.add('info-panel-enter');
-    
-    setTimeout(() => {
-      infoPanel.classList.add('info-panel-enter-active');
-    }, 10);
+    infoPanel.classList.remove('opacity-0', 'pointer-events-none');
+    infoPanel.classList.add('opacity-100');
   }
 
   private setupEventListeners(): void {
     const closeButton = document.getElementById('close-info');
     const infoPanel = document.getElementById('info-panel');
     
-    if (closeButton && infoPanel) {
-      closeButton.addEventListener('click', () => {
-        infoPanel.classList.add('hidden');
-        infoPanel.classList.remove('info-panel-enter', 'info-panel-enter-active');
+    const closePanel = () => {
+      if (infoPanel) {
+        infoPanel.classList.remove('opacity-100');
+        infoPanel.classList.add('opacity-0', 'pointer-events-none');
+      }
+    };
+
+    if (closeButton) {
+      closeButton.addEventListener('click', (e) => {
+        e.stopPropagation();
+        closePanel();
       });
     }
 
     // Close info panel when clicking on map
     this.map.on('click', () => {
-      if (infoPanel && !infoPanel.classList.contains('hidden')) {
-        infoPanel.classList.add('hidden');
-        infoPanel.classList.remove('info-panel-enter', 'info-panel-enter-active');
-      }
+      closePanel();
     });
   }
 

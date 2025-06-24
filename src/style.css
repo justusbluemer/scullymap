@@ -38,12 +38,4 @@
   border-top-color: #1f2937 !important;
 }
 
-/* Info panel animations */
-.info-panel-enter {
-  @apply opacity-0 transform scale-95;
-  transition: all 0.2s ease;
-}
-
-.info-panel-enter-active {
-  @apply opacity-100 transform scale-100;
-}
+/* Info panel animations (removed, using Tailwind classes directly) */
